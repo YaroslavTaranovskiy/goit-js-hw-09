@@ -9,8 +9,18 @@ const refs = {
   days: document.querySelector('span[data-days]'),
   hours: document.querySelector('span[data-hours]'),
   minutes: document.querySelector('span[data-minutes]'),
-  seconds: document.querySelector('span[data-seconds]'),
+    seconds: document.querySelector('span[data-seconds]'),
+    timer: document.querySelector('.timer'),
+    field: Array.from(document.querySelectorAll('.field')),
+    value: Array.from(document.querySelectorAll('.value')),
 };
+
+// додав стилів
+refs.timer.style.display = 'flex';
+refs.timer.style.marginTop = '10px';
+refs.field.forEach(e => {
+    e.style.marginRight = '15px';
+});
 
 // неактивна кнопка на старті
 refs.btnStart.setAttribute('disabled', '');
